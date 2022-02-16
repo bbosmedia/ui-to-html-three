@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+	--font-family-secondary: 'Pacifico', cursive;
+	--font-family-main: 'Poppins', sans-serif;
+	--blue: #285aeb;
+	--text-color: #262617;
+	--bg-color: #f7f7f7;
+	--white: #fff;
+	--gradient: linear-gradient(104deg, rgba(253, 89, 73, 1) 0%, rgba(214, 36, 158, 1) 100%);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: var(--font-family-main);
+}
+
+body {
+	color: var(--text-color);
+	background-color: var(--bg-color);
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+img {
+	width: 100%;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	padding: 10px 0;
+	background: var(--white);
+	border-bottom: 1px solid hsla(0, 0, 0, 0.1);
+}
+
+.container {
+	max-width: 860px;
+	margin: 0 auto;
+	width: 100%;
+	padding: 0 20px;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo {
+	font-size: 1.4rem;
+	font-weight: bold;
+	font-family: var(--font-family-secondary);
+	background-image: var(--gradient);
+	background-clip: text;
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+}
+
+.nav-icons {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	margin-right: 10px;
+}
+
+.nav-icons .bx,
+.camera-icon .bx,
+.post-box .bx,
+.footer-menu .bx {
+	font-size: 1.4rem;
+	color: var(--text-color);
+	transition: all 0.3s ease;
+}
+
+.nav-icons .bx:hover,
+.camera-icon .bx:hover,
+.footer-menu .bx:hover {
+	background-image: var(--gradient);
+	background-clip: text;
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+}
+
+.profile-img {
+	height: 32px;
+	width: 32px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 2px solid rgba(253, 89, 73, 1);
+}
+
+.camera-icon {
+	display: none;
+}
+
+.main {
+	display: flex;
+	justify-content: space-between;
+	gap: 2rem;
+	margin-top: 80px;
+}
+
+.post-container {
+	flex: 1;
+}
+
+.post-info {
+	width: 250px;
+}
+
+.post-box {
+	width: 100%;
+	background: var(--white);
+	margin-bottom: 30px;
+	border-radius: 10px;
+}
+
+.post-top {
+	padding: 10px 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 5px;
+}
+
+.post-profile {
+	display: flex;
+	align-items: center;
+}
+
+.post-profile img {
+	margin-right: 10px;
+}
+
+.profile-name {
+	font-size: 11px;
+	margin-bottom: -8px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.location {
+	font-size: 10px;
+}
+
+.post-bottom {
+	padding: 5px 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.post-bottom-initial {
+	display: flex;
+	gap: 10px;
+}
+
+.post-bottom-initia a {
+	transition: 0.3s ease;
+}
+
+.post-info {
+	padding: 15px 10px;
+	background-color: #fff;
+	display: inline-block;
+	height: 100%;
+	border-radius: 10px;
+}
+
+.account {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.account-info {
+	display: flex;
+	align-items: center;
+}
+
+.account-info .profile-name {
+	margin-bottom: 0px;
+}
+
+.account-info img {
+	margin-right: 10px;
+}
+
+.account a {
+	font-size: 12px;
+}
+
+.footer-menu {
+	background: #fff;
+	padding: 10px 0;
+	display: flex;
+	justify-content: space-evenly;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	display: none;
+}
+
+@media screen and (max-width: 680px) {
+	.post-info {
+		display: none;
+	}
+
+	.nav-icons a {
+		display: none;
+	}
+
+	.nav-icons a.paper-plane {
+		display: block;
+	}
+
+    .nav-icons{
+        order: 2;
+    }
+
+	.camera-icon {
+		display: block;
+		order: 0;
+	}
+
+    .logo{
+        order: 1;
+    }
+
+    .main{
+        margin-bottom: 35px;
+    }
+
+    .footer-menu{
+        display: flex;
+        align-items: center;
+    }
+}
